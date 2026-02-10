@@ -24,7 +24,7 @@ export default function About() {
       <h3 className="sub-heading">Self Introduction Video</h3>
       <div className="video-wrapper">
         <video className="intro-video" controls>
-          <source src="/videos/intro.mp4" type="video/mp4" />
+          <source src="/intro.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
