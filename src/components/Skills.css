@@ -1,0 +1,142 @@
+.skills-section {
+  padding: 80px 20px;
+  background: #000;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #f5b60a;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;   /* ⭐ This centers My Skills */
+  width: 100%;
+}
+
+
+/* MAIN CONTAINER */
+
+.skills-container {
+  display: flex;
+  gap: 50px;
+  justify-content:  center;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* ===== BAR SKILLS ===== */
+
+.skill-bars {
+  flex: 1;
+  min-width: 320px;
+}
+
+.bar {
+  margin-bottom: 28px;
+}
+
+.bar-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.progress {
+  height: 12px;
+  background: #222;
+  border-radius: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffd700, #f5b60a);
+  border-radius: 8px;
+  transition: width 0.7s ease;
+}
+
+/* ===== CIRCLE SKILLS ===== */
+
+.skill-circles {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+  max-width: 520px;
+  
+}
+
+/* CARD */
+
+.circle-card {
+  width: 140px;
+  height: 160px;
+  background: #111;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.05);
+}
+
+.circle-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.25);
+}
+
+/* SVG */
+
+.circle-bg {
+  fill: none;
+  stroke: #333;
+  stroke-width: 8;
+}
+
+.circle-progress {
+  fill: none;
+  stroke: #ffd700;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+/* TEXT */
+
+.circle-text {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.circle-name {
+  display: block;
+  font-size: 13px;
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.circle-percent {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+}
+

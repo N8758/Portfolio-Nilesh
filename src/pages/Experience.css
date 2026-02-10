@@ -1,0 +1,98 @@
+.experience-education-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  padding: 70px 20px;
+  background: linear-gradient(180deg, #0b0b0b, #111);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Column */
+.section-column {
+  background: transparent;
+}
+
+/* Section Title */
+.section-heading {
+  font-size: 34px;
+  color: #ffd700;
+  margin-bottom: 35px;
+  text-align: center;
+  position: relative;
+}
+
+/* Underline effect */
+.section-heading::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #00bfff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Experience / Education Card */
+.item-box {
+  background: linear-gradient(145deg, #151515, #1f1f1f);
+  border-left: 4px solid #00bfff;
+  padding: 22px 20px;
+  margin-bottom: 22px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 191, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Hover animation */
+.item-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.35);
+  border-left-color: #ffd700;
+}
+
+/* Company / College Name */
+.item-box h3 {
+  font-size: 19px;
+  color: #ffffff;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* Dates + Role */
+.item-box p {
+  font-size: 15px;
+  color: #cfcfcf;
+  margin: 3px 0;
+  line-height: 1.4;
+}
+
+/* Highlight role text */
+.item-box p:last-child {
+  color: #00bfff;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .experience-education-section {
+    padding: 40px 15px;
+    gap: 30px;
+  }
+
+  .section-heading {
+    font-size: 26px;
+  }
+
+  .item-box {
+    padding: 18px 16px;
+  }
+
+  .item-box h3 {
+    font-size: 17px;
+  }
+
+  .item-box p {
+    font-size: 14px;
+  }
+}

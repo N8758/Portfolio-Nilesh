@@ -1,0 +1,116 @@
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #0a66c2, #084ea0);
+  padding: 14px 70px;   /* ⭐ More breathing space */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+
+/* LOGO */
+.logo-img {
+  height: 48px;
+  border-radius: 50%;
+}
+
+/* DESKTOP LINKS */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 28px;   /* ⭐ Cleaner spacing */
+}
+
+
+.right a {
+  color: white;
+  font-size: 20px;
+  padding: 6px 8px;   /* ⭐ Adds breathing clickable space */
+  border-radius: 6px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+
+.right a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffd700;
+  transform: translateY(-2px);
+}
+
+
+/* MENU ICON */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  z-index: 1200;
+}
+
+/* OVERLAY */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+  z-index: 900;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .right {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+
+    background: linear-gradient(180deg, #0a66c2, #063c72);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 45px;
+    transition: 0.4s ease;
+
+    box-shadow: -8px 0 30px rgba(0,0,0,0.6);
+    z-index: 1100;
+  }
+
+  .right.active {
+    right: 0;
+  }
+
+  .right a {
+    font-size: 18px;
+    background: rgba(255,255,255,0.1);
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+  }
+
+  .right a:hover {
+    background: #ffd700;
+    color: black;
+    transform: scale(1.1);
+  }
+}

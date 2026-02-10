@@ -1,0 +1,135 @@
+/* Contact Section Styling */
+.contact-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #111;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contact-section h2 {
+  color: #f5b60a;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #222;
+  color: #fff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #f5b60a;
+  color: #111;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ffc107;
+}
+
+.form-message {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #00ff88;
+}
+
+/* Contact Info Section */
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding: 30px 20px;
+  border-top: 1px solid #333;
+  gap: 20px; /* reduce spacing for mobile */
+}
+
+.info-item {
+  flex: 1 1 250px;
+  min-width: 220px;
+  text-align: center;
+}
+
+.info-item h3 {
+  color: #f5b60a;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.info-item p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #eee;
+}
+
+.info-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  background-color: #0d6efd;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsive Mobile View */
+@media (max-width: 768px) {
+  .contact-section h2 {
+    font-size: 28px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* reduced vertical spacing */
+    padding: 20px 10px;
+  }
+
+  .info-item {
+    width: 100%;
+    margin-bottom: 0; /* remove default bottom margin */
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 14px;
+  }
+
+  .info-item p {
+    font-size: 15px;
+  }
+}
