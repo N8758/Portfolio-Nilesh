@@ -26,7 +26,7 @@ export default function Experience() {
 
   {/* FULL TIME */}
   <div className="item-box">
-    <h3>Highbrow Technosoft Pvt. Ltd (Remote)</h3>
+    <h3>Highbrow Technosoft Pvt. Ltd</h3>
     <p>Sept 2025 – Present</p>
     <p>Full Stack Developer</p>
     <p>Delivered production MERN features and optimized backend API workflows.</p>
@@ -34,7 +34,7 @@ export default function Experience() {
 
   {/* PART TIME */}
   <div className="item-box">
-    <h3>Technical One (Remote)</h3>
+    <h3>Technical One (Part-Time)</h3>
     <p>Oct 2025 – Present</p>
     <p>AI / ML Trainer</p>
     <p>Mentored learners in Python and ML projects with deployment guidance.</p>
