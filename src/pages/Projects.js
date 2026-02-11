@@ -13,21 +13,21 @@ export default function Projects() {
             stack: "Python, Scikit-learn, Random Forest",
             description:
               "Designed a machine learning model to detect malicious PDF files. Included feature extraction and dataset refinement.",
-            link: "https://github.com/N8758/PDF-MALWARE-DETECTION",
+            link: "https://pdf-malware-detection-2.onrender.com/",
           },
           {
             title: "Salon Appointment System",
             stack: "MERN Stack",
             description:
               "Booking system with user authentication, appointment scheduling, and real-time updates.",
-            link: "https://github.com/N8758/salon-appointment-booking-system",
+            link: "https://salon-1s6c.vercel.app/",
           },
           {
             title: "Recipe Finder",
             stack: "Full Stack",
             description:
               "Web platform to search recipes by ingredients and dietary preferences. Fast UI and responsive.",
-            link: "https://github.com/N8758/Finder-Recipe",
+            link: "https://finder-recipe.vercel.app/",
           },
           {
             title: "Email Marketing Flowchart Assistant",
@@ -41,7 +41,7 @@ export default function Projects() {
             stack: "Full Stack",
             description:
               "Real-time weather data using OpenWeather API + local storage to-do list.",
-            link: "https://github.com/N8758/WhatherDolist",
+            link: "https://whather-dolist.vercel.app/",
           },
           {
             title: "AI Finance Assistant",
@@ -55,15 +55,90 @@ export default function Projects() {
             stack: "Frontend",
             description:
               "Responsive landing page with sleek UI for freelancers.",
-            link: "https://github.com/N8758/freelancer-landing-page-",
+            link: "https://final-landing-page-mu.vercel.app/",
           },
           {
             title: "Solar AI Assistant",
             stack: "AI",
             description:
               "Smart assistant for solar panel-related queries using AI tech.",
-            link: "https://github.com/N8758/solar-ai-assistant",
+            link: "  https://solar-ai-assistant-8xf6d9kgr9xemel4p8adz9.streamlit.app/",
           },
+           {
+    title: "Order Management System",
+    stack: "Full Stack (MERN)",
+    description:
+      "A scalable order management platform that allows users to manage orders, track deliveries, and monitor transactions with efficient backend API handling.",
+    link: "https://order-management-system-144b.vercel.app/"
+  },
+  {
+    title: "Wellness AI Health Assistant",
+    stack: "AI / Streamlit",
+    description:
+      "A wellness tracking application that helps users monitor health conditions, lifestyle habits, and mental well-being with AI-based suggestions.",
+    link: "https://wellness-jxraaywccr6wmrtrgsmlqg.streamlit.app"
+  },
+  {
+    title: "Quote of the Day App",
+    stack: "React.js / API Integration",
+    description:
+      "A motivational quote generator that fetches real-time quotes using APIs with search functionality and responsive UI design.",
+    link: "https://quote-of-day-j54e.vercel.app"
+  },
+   {
+    title: "React Xperience Hub",
+    stack: "React.js",
+    description:
+      "An interactive learning hub showcasing React components, UI experiments, and modern frontend development practices.",
+    link: "https://react-xperience-hub-ktms.vercel.app"
+  },
+
+  {
+    title: "Delivery Label Generator",
+    stack: "Full Stack / Automation",
+    description:
+      "A delivery label automation system that generates shipping labels dynamically, improving logistics efficiency and reducing manual errors.",
+    link: "https://delivery-label-app-1-cl5h.onrender.com"
+  },
+  {
+    title: "E-Commerce Shopping Platform",
+    stack: "Full Stack MERN",
+    description:
+      "A modern e-commerce platform with product browsing, authentication, cart management, and secure payment workflow integration.",
+    link: "https://ecommerce-project-eight-murex.vercel.app/"
+  },
+
+  {
+    title: "RendShop Shopify Store",
+    stack: "Shopify / E-Commerce",
+    description:
+      "A fully customized Shopify-based e-commerce store with product catalog management and optimized user shopping experience.",
+    link: "https://rend-shop.myshopify.com/"
+  },
+  {
+    title: "Secure Password Generator",
+    stack: "React.js / Security Tools",
+    description:
+      "A password generation tool that creates highly secure and customizable passwords to improve user cybersecurity practices.",
+    link: "https://password-kappa-gules.vercel.app/"
+  },
+
+  {
+    title: "Application Form Portal",
+    stack: "Frontend + Backend Integration",
+    description:
+      "A responsive application form system with validation, structured data submission, and user-friendly interface design.",
+    link: "https://applicatonform.vercel.app/"
+  },
+  {
+    title: "APJ Abdul Kalam Tribute Website",
+    stack: "HTML / CSS / JavaScript",
+    description:
+      "A tribute website dedicated to Dr. APJ Abdul Kalam showcasing biography, achievements, and inspirational contributions.",
+    link: "https://apj-abdul-kalam-tribute-website.vercel.app/"
+  }
+
+          
         ].map((project, index) => (
           <div className="card" key={index}>
             <h3>{project.title}</h3>
