@@ -17,7 +17,7 @@ export default function Home() {
         </p>
         <div className="home-buttons">
           <a href="/resume.pdf" download className="btn">Download Resume</a>
-          <a href="Projects" className="btn secondary">View Projects</a>
+          <a href="/projects" className="btn secondary">View Projects</a>
         </div>
       </div>
 
