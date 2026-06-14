@@ -1,142 +1,273 @@
-.skills-section {
-  padding: 80px 20px;
-  background: #000;
-  color: white;
-  font-family: "Segoe UI", sans-serif;
+/* ═══════════════════════════════════════
+   SKILLS SECTION — matches Home.js
+═══════════════════════════════════════ */
+
+.sk-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+  padding: 90px 24px 100px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #fff;
 }
 
-.section-title {
-  font-size: 36px;
-  color: #f5b60a;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;   /* ⭐ This centers My Skills */
-  width: 100%;
+/* ── Blobs ── */
+.sk-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 0;
+}
+.sk-blob-1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, #00bfff, transparent 70%);
+  top: -120px; left: -100px;
+}
+.sk-blob-2 {
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, #a78bfa, transparent 70%);
+  bottom: -80px; right: -80px;
 }
 
-
-/* MAIN CONTAINER */
-
-.skills-container {
-  display: flex;
-  gap: 50px;
-  justify-content:  center;
-  flex-wrap: wrap;
-  max-width: 1300px;
-  margin: auto;
+/* ── Inner ── */
+.sk-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* ===== BAR SKILLS ===== */
-
-.skill-bars {
-  flex: 1;
-  min-width: 320px;
+/* ── Header ── */
+.sk-header {
+  text-align: center;
+  margin-bottom: 48px;
 }
-
-.bar {
-  margin-bottom: 28px;
-}
-
-.bar-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 6px;
-  color: #ffd700;
+.sk-eyebrow {
+  font-size: 13px;
   font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #00bfff;
+  margin-bottom: 12px;
+}
+.sk-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 14px;
+  line-height: 1.15;
+}
+.sk-title-accent {
+  background: linear-gradient(135deg, #00bfff, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.sk-subtitle {
+  font-size: 16px;
+  color: #718096;
+  max-width: 460px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-.progress {
-  height: 12px;
-  background: #222;
-  border-radius: 8px;
-}
-
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #ffd700, #f5b60a);
-  border-radius: 8px;
-  transition: width 0.7s ease;
-}
-
-/* ===== CIRCLE SKILLS ===== */
-
-.skill-circles {
-  flex: 1;
+/* ── Tabs ── */
+.sk-tabs {
   display: flex;
-  flex-wrap: wrap;
-  gap: 28px;
   justify-content: center;
-  max-width: 520px;
-  
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+.sk-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #718096;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  font-family: inherit;
+}
+.sk-tab:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.07);
+}
+.sk-tab--active {
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.06);
 }
 
-/* CARD */
+/* ── Content grid ── */
+.sk-content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 36px;
+  align-items: start;
+}
 
-.circle-card {
-  width: 140px;
-  height: 160px;
-  background: #111;
-  border-radius: 18px;
+/* ── Bar column ── */
+.sk-col-label {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  letter-spacing: 0.3px;
+}
+
+.sk-bars {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.05);
+  gap: 20px;
 }
 
-.circle-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.25);
+.sk-bar-row {}
+
+.sk-bar-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
 }
-
-/* SVG */
-
-.circle-bg {
-  fill: none;
-  stroke: #333;
-  stroke-width: 8;
+.sk-bar-name {
+  font-size: 14.5px;
+  color: #e2e8f0;
+  font-weight: 500;
 }
-
-.circle-progress {
-  fill: none;
-  stroke: #ffd700;
-  stroke-width: 8;
-  stroke-linecap: round;
-  transform: rotate(-90deg);
-  transform-origin: center;
-}
-
-/* TEXT */
-
-.circle-text {
-  text-align: center;
-  margin-top: 8px;
-}
-
-.circle-name {
-  display: block;
+.sk-bar-pct {
   font-size: 13px;
-  color: #ffd700;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.circle-percent {
+.sk-track {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.sk-fill {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.7s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.7s ease;
+}
+
+/* ── Overview cards (right col) ── */
+.sk-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.sk-overview-card {
+  background: linear-gradient(145deg, #141414, #1b1b1b);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 14px 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.22s ease;
+  font-family: inherit;
+  width: 100%;
+}
+.sk-overview-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+}
+.sk-overview-card--active {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sk-ov-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.sk-ov-icon { font-size: 16px; }
+.sk-ov-label {
   font-size: 14px;
-  color: #aaa;
+  font-weight: 700;
+  color: #a0aec0;
+  transition: color 0.22s;
 }
 
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 768px) {
-  .skills-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .section-title {
-    font-size: 32px;
-  }
+.sk-ov-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.sk-ov-pill {
+  font-size: 11px;
+  color: #718096;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2px 9px;
+  border-radius: 20px;
+}
+.sk-ov-more {
+  font-size: 11px;
+  color: #4a5568;
+  padding: 2px 9px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
+/* ── Stats strip ── */
+.sk-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.sk-stat {
+  text-align: center;
+  padding: 24px 16px;
+  background: linear-gradient(145deg, #141414, #1b1b1b);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.sk-stat:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 191, 255, 0.12);
+}
+.sk-stat-val {
+  display: block;
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00bfff, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+}
+.sk-stat-label {
+  font-size: 13px;
+  color: #718096;
+  line-height: 1.4;
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .sk-content {
+    grid-template-columns: 1fr;
+  }
+  .sk-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .sk-section { padding: 60px 16px 70px; }
+  .sk-title { font-size: 30px; }
+  .sk-stats { grid-template-columns: repeat(2, 1fr); }
+  .sk-stat-val { font-size: 26px; }
+}
