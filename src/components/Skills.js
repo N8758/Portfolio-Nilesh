@@ -213,7 +213,7 @@ export default function Skills() {
         <div className="sk-stats">
           {[
             { v: "10+", l: "Languages & Frameworks" },
-            { v: "55+", l: "Apps Shipped" },
+            { v: "60+",l: "APP Shipped"},
             { v: "45+", l: "ML Models Built" },
             { v: "8",   l: "Engineering Roles" },
           ].map((s, i) => (

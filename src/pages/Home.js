@@ -50,8 +50,8 @@ export default function Home() {
   }, [displayed, deleting, pause, roleIndex]);
 
   const stats = [
-    { value: '2+', label: 'Years Experience' },
-    { value: '55+', label: 'Apps Built' },
+    { value: '3+', label: 'Years Experience' },
+    { value: '60+', label: 'Apps Built' },
     { value: '8', label: 'Engineering Roles' },
     { value: '45+', label: 'ML Models' },
   ];

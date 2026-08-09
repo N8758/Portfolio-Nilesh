@@ -48,13 +48,13 @@ export default function About() {
               <h3 className="ab-name">Nilesh Pulate</h3>
               <p className="ab-role-line">Full Stack & AI/ML Engineer · Pune, India</p>
               <p className="ab-bio">
-                I'm a results-driven Full Stack Developer with <strong>2+ years</strong> of
+                I'm a results-driven Full Stack Developer with <strong>3+years</strong> of
                 hands-on experience building production-grade MERN applications, LLM-integrated
                 platforms, and intelligent ML systems. I love turning complex challenges into
                 clean, scalable, and impactful solutions — from backend APIs to RAG pipelines.
               </p>
               <p className="ab-bio">
-                With <strong>55+ apps shipped</strong> and <strong>45+ ML models built</strong>,
+                With <strong>60+ apps shipped</strong> and <strong>45+ ML models built</strong>,
                 I thrive in fast-paced environments where engineering meets real business impact.
               </p>
 
