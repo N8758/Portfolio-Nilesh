@@ -1,17 +1,30 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './Home.css';
+import React, { useEffect, useRef, useState } from "react";
+import "./Home.css";
 
 const roles = [
-  'Full Stack Developer',
-  'AI/ML Engineer',
-  'MERN Stack Developer',
-  'LLM Integration Engineer',
-  'React & Node.js Developer',
+  "Full Stack Developer",
+  "AI/ML Engineer",
+  "MERN Stack Developer",
+  "LLM Integration Engineer",
+  "React & Node.js Developer",
+];
+
+const stats = [
+  { value: "2+", label: "Years Experience" },
+  { value: "60+", label: "Apps Built" },
+  { value: "8", label: "Engineering Roles" },
+  { value: "45+", label: "ML Models" },
+];
+
+const techBadges = [
+  "React.js", "Node.js", "TypeScript", "MongoDB",
+  "OpenAI API", "LangChain", "Python", "AWS",
+  "PostgreSQL", "Docker", "GraphQL", "Redis",
 ];
 
 export default function Home() {
   const [roleIndex, setRoleIndex] = useState(0);
-  const [displayed, setDisplayed] = useState('');
+  const [displayed, setDisplayed] = useState("");
   const [deleting, setDeleting] = useState(false);
   const [pause, setPause] = useState(false);
   const timeoutRef = useRef(null);
@@ -49,114 +62,110 @@ export default function Home() {
     return () => clearTimeout(timeoutRef.current);
   }, [displayed, deleting, pause, roleIndex]);
 
-  const stats = [
-    { value: '3+', label: 'Years Experience' },
-    { value: '60+', label: 'Apps Built' },
-    { value: '8', label: 'Engineering Roles' },
-    { value: '45+', label: 'ML Models' },
-  ];
-
-  const techBadges = [
-    'React.js', 'Node.js', 'TypeScript', 'MongoDB',
-    'OpenAI API', 'LangChain', 'Python', 'AWS',
-    'PostgreSQL', 'Docker', 'GraphQL', 'Redis',
-  ];
-
   return (
-    <section className="home-wrapper">
-      {/* Background blobs */}
-      <div className="blob blob-1" />
-      <div className="blob blob-2" />
-      <div className="blob blob-3" />
+    <section className="hm-section" id="home">
+      {/* Background */}
+      <div className="hm-blob hm-blob-1" aria-hidden="true" />
+      <div className="hm-blob hm-blob-2" aria-hidden="true" />
+      <div className="hm-blob hm-blob-3" aria-hidden="true" />
 
-      <div className="home-inner">
+      <div className="hm-inner">
         {/* LEFT */}
-        <div className="home-left">
-          <div className="eyebrow">
-            <span className="dot" />
+        <div className="hm-left">
+          <div className="hm-eyebrow">
+            <span className="hm-eyebrow-dot" aria-hidden="true" />
             Available for opportunities
           </div>
 
-          <h1 className="hero-name">
+          <h1 className="hm-name">
             Hi, I'm<br />
-            <span className="name-gradient">Nilesh Pulate</span>
+            <span className="hm-name-gradient">Nilesh Pulate</span>
           </h1>
 
-          <div className="typewriter-row">
-            <span className="typewriter-text">{displayed}</span>
-            <span className="cursor">|</span>
+          <div className="hm-type">
+            <span className="hm-type-text" aria-label={roles[roleIndex]}>
+              {displayed}
+            </span>
+            <span className="hm-cursor" aria-hidden="true">|</span>
           </div>
 
-          <p className="hero-bio">
+          <p className="hm-bio">
             I build production-grade web apps, AI-integrated platforms, and
             intelligent systems — from MERN stacks to RAG pipelines and LLM
             deployments that solve real business problems.
           </p>
 
           {/* Stats */}
-          <div className="stats-row">
+          <div className="hm-stats">
             {stats.map((s) => (
-              <div className="stat-card" key={s.label}>
-                <span className="stat-value">{s.value}</span>
-                <span className="stat-label">{s.label}</span>
+              <div className="hm-stat" key={s.label}>
+                <span className="hm-stat-value">{s.value}</span>
+                <span className="hm-stat-label">{s.label}</span>
               </div>
             ))}
           </div>
 
           {/* CTA Buttons */}
-          <div className="cta-row">
-            <a href="/resume.pdf" download className="btn-primary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          <div className="hm-cta">
+            <a href="/resume.pdf" download className="hm-btn hm-btn-primary">
+              <svg className="hm-btn-icon hm-icon-download" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
               </svg>
               Download Resume
             </a>
-            <a href="/projects" className="btn-secondary">
+            <a href="/projects" className="hm-btn hm-btn-secondary">
               View Projects
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+              <svg className="hm-btn-icon hm-icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
           </div>
 
           {/* Tech badges */}
-          <div className="badge-row">
-            {techBadges.map((t) => (
-              <span className="badge" key={t}>{t}</span>
+          <div className="hm-badges">
+            {techBadges.map((t, i) => (
+              <span className="hm-badge" key={t} style={{ "--i": i }}>
+                {t}
+              </span>
             ))}
           </div>
         </div>
 
         {/* RIGHT */}
-        <div className="home-right">
-          <div className="photo-frame">
-            <div className="photo-ring ring-outer" />
-            <div className="photo-ring ring-inner" />
+        <div className="hm-right">
+          <div className="hm-photo">
+            <div className="hm-ring hm-ring-outer" aria-hidden="true" />
+            <div className="hm-ring hm-ring-inner" aria-hidden="true" />
             <img
               src="/profile.png"
               alt="Nilesh Pulate"
-              className="profile-photo"
+              className="hm-photo-img"
+              width="320"
+              height="320"
+              decoding="async"
+              fetchpriority="high"
             />
+
             {/* Floating cards */}
-            <div className="float-card card-top">
-              <span className="card-icon">⚡</span>
+            <div className="hm-float hm-float-top">
+              <span className="hm-float-icon" aria-hidden="true">⚡</span>
               <div>
-                <div className="card-title">Full Stack</div>
-                <div className="card-sub">MERN + TypeScript</div>
+                <div className="hm-float-title">Full Stack</div>
+                <div className="hm-float-sub">MERN + TypeScript</div>
               </div>
             </div>
-            <div className="float-card card-bottom">
-              <span className="card-icon">🤖</span>
+            <div className="hm-float hm-float-bottom">
+              <span className="hm-float-icon" aria-hidden="true">🤖</span>
               <div>
-                <div className="card-title">AI / LLM</div>
-                <div className="card-sub">GPT-4 · RAG · LangChain</div>
+                <div className="hm-float-title">AI / LLM</div>
+                <div className="hm-float-sub">GPT-4 · RAG · LangChain</div>
               </div>
             </div>
-            <div className="float-card card-side">
-              <span className="card-icon">☁️</span>
+            <div className="hm-float hm-float-side">
+              <span className="hm-float-icon" aria-hidden="true">☁️</span>
               <div>
-                <div className="card-title">Cloud</div>
-                <div className="card-sub">AWS · Azure · Docker</div>
+                <div className="hm-float-title">Cloud</div>
+                <div className="hm-float-sub">AWS · Azure · Docker</div>
               </div>
             </div>
           </div>
